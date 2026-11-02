@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>JPad Pro — Privacy Policy</title>
+<style>
+  :root { --fg: #1f2937; --muted: #4b5563; --bg: #ffffff; --line: #e5e7eb; --accent: #1d6fa5; }
+  @media (prefers-color-scheme: dark) { :root { --fg: #e5e7eb; --muted: #9ca3af; --bg: #111827; --line: #374151; --accent: #7cc4f2; } }
+  body { margin: 0; background: var(--bg); color: var(--fg); font: 16px/1.6 system-ui, -apple-system, "Segoe UI", Roboto, sans-serif; }
+  main { max-width: 760px; margin: 0 auto; padding: 32px 20px 64px; }
+  h1 { font-size: 28px; margin: 0 0 4px; } h2 { font-size: 19px; margin: 28px 0 8px; padding-top: 16px; border-top: 1px solid var(--line); }
+  p, li { color: var(--fg); } .muted { color: var(--muted); } a { color: var(--accent); }
+  table { width: 100%; border-collapse: collapse; font-size: 15px; } th, td { text-align: left; padding: 8px; border-bottom: 1px solid var(--line); vertical-align: top; }
+</style>
+</head>
+<body>
+<main>
+<h1>JPad Pro — Privacy Policy</h1>
+<p class="muted">Last updated: November 1, 2026 · Developer: JPadPro · Contact: <a href="mailto:jpadprojdev@gmail.com">jpadprojdev@gmail.com</a></p>
+
+<p>JPad Pro is a writing app. This policy explains what data the app handles and why. In short: your documents stay on your device or in your own cloud storage, we do not show ads, and we do not track you.</p>
+
+<h2>1. Your documents</h2>
+<p>Documents, folders and settings are stored on your device. We (the developer) do not receive, read or store your documents on any server of ours.</p>
+<p>Your documents, folders and cloud sign-in data are always stored on the device in encrypted form (AES-256-GCM). Without a password, the app uses a random encryption key that is created on your device and kept in the app’s protected storage; it cannot be read out by the app’s code. If you turn on the optional password, the key is derived from your password (PBKDF2), and the password is never sent anywhere. If you turn on fingerprint unlock, the password is kept in the secure storage of your phone and is used only to open the app.</p>
+
+<h2>2. Cloud storage you connect</h2>
+<p>You can connect your own Dropbox, Google Drive or Microsoft OneDrive account. You sign in on the page of that service; the app never sees your password for it. After sign-in the app receives an access token from the service and keeps it on your device.</p>
+<p>When you open, save or sync a document, it is transferred directly between your device and your own cloud account. It is not sent to us.</p>
+<ul>
+  <li><b>Google Drive</b>: the app requests access only to files it creates or that you open with it (scope <code>drive.file</code>). It works inside a folder named “JPad Pro”.</li>
+  <li><b>OneDrive</b>: the app can list and read your files so that you can open them, and saves new documents into a folder named “JPad Pro”.</li>
+  <li><b>Dropbox</b>: the app can list, read and write files you choose to work with.</li>
+</ul>
+<p>JPad Pro’s use of information received from Google APIs adheres to the <a href="https://developers.google.com/terms/api-services-user-data-policy">Google API Services User Data Policy</a>, including the Limited Use requirements. You can disconnect a cloud at any time in the app (Cloud → the service → Disconnect) and revoke access in the settings of your Dropbox, Google or Microsoft account.</p>
+
+<h2>3. Optional JPad Pro account</h2>
+<p>You can use the app without an account. If you create one, we use Google Firebase Authentication to store your <b>email address</b>, an account ID and a hashed password (or your Google sign-in). This is used only to sign you in and to keep your Pro subscription on all your devices.</p>
+
+<h2>4. Subscription</h2>
+<p>Payments are processed by Google Play. We never see your card details. To check whether your subscription is active we use RevenueCat, which receives the purchase information from Google Play and an anonymous app user ID (or your account ID, if you are signed in).</p>
+
+<h2>5. Data we collect — summary</h2>
+<table>
+  <tr><th>Data</th><th>When</th><th>Why</th><th>Shared with</th></tr>
+  <tr><td>Email address, account ID</td><td>Only if you create an account</td><td>Sign-in, keeping Pro on your devices</td><td>Google Firebase (service provider)</td></tr>
+  <tr><td>Purchase history</td><td>Only if you subscribe</td><td>Unlocking Pro features</td><td>Google Play, RevenueCat (service providers)</td></tr>
+</table>
+<p>We do not collect location, contacts, photos, device identifiers, analytics or crash data. We do not sell data and do not use it for advertising.</p>
+
+<h2>6. Deleting your data</h2>
+<ul>
+  <li><b>Documents</b>: delete them in the app, or uninstall the app to remove all data from the device.</li>
+  <li><b>Account</b>: in the app open Account → <b>Delete account</b>. You can also request deletion here: <a href="delete-account.html">Delete your JPad Pro account</a>. Account data is deleted within 30 days.</li>
+  <li><b>Cloud access</b>: disconnect the cloud in the app and revoke access in your cloud account settings.</li>
+</ul>
+
+<h2>7. Security</h2>
+<p>All network connections use HTTPS. The app restricts which servers it can contact, and documents from other sources are cleaned before they are shown.</p>
+
+<h2>8. Children</h2>
+<p>JPad Pro is not directed at children under 13, and we do not knowingly collect data from them.</p>
+
+<h2>9. Changes</h2>
+<p>If this policy changes, we will update this page and the date above.</p>
+
+<h2>10. Contact</h2>
+<p>Questions or requests: <a href="mailto:jpadprojdev@gmail.com">jpadprojdev@gmail.com</a></p>
+</main>
+</body>
+</html>
