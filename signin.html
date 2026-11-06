@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<title>JPadPro — Finish creating your account</title>
+<style>
+  :root { --fg: #1f2937; --muted: #4b5563; --bg: #ffffff; --card: #f3f7fb; --accent: #1d6fa5; }
+  @media (prefers-color-scheme: dark) { :root { --fg: #e5e7eb; --muted: #9ca3af; --bg: #111827; --card: #1b2433; --accent: #7cc4f2; } }
+  body { margin: 0; background: var(--bg); color: var(--fg); font: 16px/1.6 system-ui, -apple-system, "Segoe UI", Roboto, sans-serif; }
+  main { max-width: 520px; margin: 0 auto; padding: 48px 22px; text-align: center; }
+  h1 { font-size: 24px; margin: 0 0 10px; }
+  p { color: var(--muted); margin: 0 0 18px; }
+  a.btn { display: inline-block; padding: 14px 26px; border-radius: 14px; background: linear-gradient(120deg, #3d7fb3, #2fb39a); color: #fff; text-decoration: none; font-weight: 700; font-size: 17px; }
+  .note { margin-top: 22px; font-size: 14px; background: var(--card); border-radius: 12px; padding: 12px 14px; }
+</style>
+</head>
+<body>
+<main>
+  <h1 id="t">Opening JPadPro…</h1>
+  <p id="d">Tap the button to finish creating your JPadPro account.</p>
+  <a class="btn" id="open" href="#">Open JPadPro</a>
+  <p class="note" id="n">Open this link on the phone where you installed JPadPro and tapped “Create account”. If you didn’t ask for this, you can ignore the email — no account is created.</p>
+</main>
+<script>
+  (function () {
+    var q = new URLSearchParams(location.search);
+    var code = q.get('oobCode'), mode = q.get('mode') || 'signIn';
+    var btn = document.getElementById('open');
+    if (!code) {
+      document.getElementById('t').textContent = 'Link is not complete';
+      document.getElementById('d').textContent = 'Please open the link from the JPadPro email again.';
+      btn.style.display = 'none'; return;
+    }
+    var params = 'oobCode=' + encodeURIComponent(code) + '&mode=' + encodeURIComponent(mode);
+    var android = /Android/i.test(navigator.userAgent);
+    var url = android
+      ? 'intent://auth/email?' + params + '#Intent;scheme=com.jpadpro.app;package=com.jpadpro.app;end'
+      : 'com.jpadpro.app://auth/email?' + params;
+    btn.href = url;
+    if (android) setTimeout(function () { location.href = url; }, 300);
+    else document.getElementById('d').textContent = 'Open this link on your Android phone with JPadPro installed.';
+  })();
+</script>
+</body>
+</html>
