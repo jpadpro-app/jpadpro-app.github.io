@@ -17,7 +17,7 @@
 <body>
 <main>
 <h1>JPadPro — Privacy Policy</h1>
-<p class="muted">Last updated: November 1, 2026 · Developer: JPadPro · Contact: <a href="mailto:jpadprojdev@gmail.com">jpadprojdev@gmail.com</a></p>
+<p class="muted">Last updated: November 10, 2026 · Developer: JPadPro · Contact: <a href="mailto:jpadprojdev@gmail.com">jpadprojdev@gmail.com</a></p>
 
 <p>JPadPro is a writing app. This policy explains what data the app handles and why. In short: your documents stay on your device or in your own cloud storage, we do not show ads, and we do not track you.</p>
 
@@ -25,6 +25,8 @@
 <p>Documents, folders and settings are stored on your device. We (the developer) do not receive, read or store your documents on any server of ours.</p>
 <p>Your documents, folders and cloud sign-in data are always stored on the device in encrypted form (AES-256-GCM). Without a password, the app uses a random encryption key that is created on your device and kept in the app’s protected storage; it cannot be read out by the app’s code. If you turn on the optional password, the key is derived from your password (PBKDF2), and the password is never sent anywhere. If you turn on fingerprint unlock, the password is kept in the secure storage of your phone and is used only to open the app.</p>
 
+<p><strong>Version history and draft recovery.</strong> If you turn on version history, earlier versions of your documents are saved on your device in encrypted form so you can restore them. If the app closes before your changes are saved, an encrypted draft is kept on the device so you can restore it. None of this leaves your device.</p>
+<p><strong>Notifications.</strong> After an export, the app can show a notification on your phone (for example, “Export complete”). Notifications are created by the app on your device; we do not use a notification server and do not send you messages.</p>
 <h2>2. Cloud storage you connect</h2>
 <p>You can connect your own Dropbox, Google Drive or Microsoft OneDrive account. You sign in on the page of that service; the app never sees your password for it. After sign-in the app receives an access token from the service and keeps it on your device.</p>
 <p>When you open, save or sync a document, it is transferred directly between your device and your own cloud account. It is not sent to us.</p>
@@ -35,16 +37,19 @@
 </ul>
 <p>JPadPro’s use of information received from Google APIs adheres to the <a href="https://developers.google.com/terms/api-services-user-data-policy">Google API Services User Data Policy</a>, including the Limited Use requirements. You can disconnect a cloud at any time in the app (Cloud → the service → Disconnect) and revoke access in the settings of your Dropbox, Google or Microsoft account.</p>
 
+<p><strong>Cloud backup and auto-sync (Pro).</strong> If you turn these on, the app copies your documents to <em>your own</em> connected cloud account (folder “JPad Pro/Backups”) and keeps cloud documents up to date between your devices. The data goes only to your cloud account, never to us.</p>
 <h2>3. Optional JPadPro account</h2>
 <p>You can use the app without an account. If you create one, we use Google Firebase Authentication to store your <b>email address</b>, an account ID and a hashed password. This is used only to sign you in and to keep your Pro subscription on all your devices.</p>
 
+<p><strong>Sign in with Google.</strong> If you choose “Continue with Google”, Google shares your email address, your name and your Google account ID with the app through Google Firebase Authentication. We use them only to sign you in and to show your name in the Account window. We do not get access to your Google Drive, Gmail or other Google data through this sign-in.</p>
+<p><strong>Email sign-up.</strong> When you create an account with your email, we send one confirmation link to that address. The account is created only after the link is opened.</p>
 <h2>4. Subscription</h2>
 <p>Payments are processed by Google Play. We never see your card details. To check whether your subscription is active we use RevenueCat, which receives the purchase information from Google Play and an anonymous app user ID (or your account ID, if you are signed in).</p>
 
 <h2>5. Data we collect — summary</h2>
 <table>
   <tr><th>Data</th><th>When</th><th>Why</th><th>Shared with</th></tr>
-  <tr><td>Email address, account ID</td><td>Only if you create an account</td><td>Sign-in, keeping Pro on your devices</td><td>Google Firebase (service provider)</td></tr>
+  <tr><td>Email address, account ID; name (only with Google sign-in)</td><td>Only if you create an account</td><td>Sign-in, keeping Pro on your devices</td><td>Google Firebase (service provider)</td></tr>
   <tr><td>Purchase history</td><td>Only if you subscribe</td><td>Unlocking Pro features</td><td>Google Play, RevenueCat (service providers)</td></tr>
 </table>
 <p>We do not collect location, contacts, photos, device identifiers, analytics or crash data. We do not sell data and do not use it for advertising.</p>
@@ -67,6 +72,7 @@
 
 <h2>10. Contact</h2>
 <p>Questions or requests: <a href="mailto:jpadprojdev@gmail.com">jpadprojdev@gmail.com</a></p>
+<p style="margin-top:28px;text-align:center;font-size:13px;opacity:.7">© 2026 JPadPro. All rights reserved.</p>
 </main>
 </body>
 </html>
